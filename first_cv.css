@@ -10,6 +10,7 @@
         La première n'est pas très haute pour que la deuxième passe un peu au-dessus*/
         grid-template-rows: 150px 1fr;
     }
+    #photo>img {height: 200px;}
 }
 
 /* On ne modifie pas le placement des lignes, mais le titre doit descendre : sinon il est caché par la photo */
@@ -23,8 +24,9 @@
         grid-template-columns : 1/4fr 1/2fr 1/4fr;
         /* On impose les hauteurs des lignes 
         La première n'est pas très haute pour que la deuxième passe un peu au-dessus*/
-        grid-template-rows: 200px 1fr;
+        grid-template-rows: 150px 1fr;
     }
+    #photo>img {height: 200px;}
 }
 
 /* Placement de la div "header" */
@@ -54,7 +56,7 @@ div#photo {
     border-color: black;
     border:10px;
 }
-#photo>img {height: 200px;
+#photo>img {
     /* position permet de régler l'étage sur lequel sera l'image */
     position:absolute;}
 
