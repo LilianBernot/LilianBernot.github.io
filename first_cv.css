@@ -10,7 +10,7 @@
         La première n'est pas très haute pour que la deuxième passe un peu au-dessus*/
         grid-template-rows: 150px 1fr;
     }
-    #photo>img {height: 200px;}
+    #photo>img {height:150px;}
 }
 
 /* On ne modifie pas le placement des lignes, mais le titre doit descendre : sinon il est caché par la photo */
