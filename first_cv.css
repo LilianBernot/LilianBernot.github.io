@@ -1,0 +1,137 @@
+@media only screen and (min-width: 512px) {
+    div#main-grid {
+        display :grid;
+        grid-template-areas:
+            "header header header"
+            "infos infos infos";
+        /* La colonne du milieu complète la place*/
+        grid-template-columns : 200px 1fr 200px;
+        /* On impose les hauteurs des lignes 
+        La première n'est pas très haute pour que la deuxième passe un peu au-dessus*/
+        grid-template-rows: 150px 1fr;
+    }
+}
+
+/* On ne modifie pas le placement des lignes, mais le titre doit descendre : sinon il est caché par la photo */
+@media only screen and (max-width: 512px) {
+    div#main-grid {
+        display :grid;
+        grid-template-areas:
+            "header header header"
+            "infos infos infos";
+        /* La colonne du milieu complète la place*/
+        grid-template-columns : 1/4fr 1/2fr 1/4fr;
+        /* On impose les hauteurs des lignes 
+        La première n'est pas très haute pour que la deuxième passe un peu au-dessus*/
+        grid-template-rows: 200px 1fr;
+    }
+}
+
+/* Placement de la div "header" */
+#header { grid-area: header; }
+#header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 160%;
+    padding: 16px 8% 16px 0px;
+    border:2px;
+}
+
+#header>span {
+    background-color: #fefefe;
+    border-radius: 8px;
+    padding: 10px 5px;
+    border: 1px solid #666;
+}
+
+/* Placement de la photo */
+div#photo {
+    grid-area: header;
+    /* Poistion à l'intérieur de la div */
+    display: flex;
+    justify-content: flex-start;
+    border-color: black;
+    border:10px;
+}
+#photo>img {height: 200px;
+    /* position permet de régler l'étage sur lequel sera l'image */
+    position:absolute;}
+
+
+
+
+/* Div suivantes */
+@media only screen and (min-width: 512px) {
+    div#second-grid {
+        display :grid;
+        grid-template-areas:
+            "left right";
+        /* La colonne du milieu complète la place*/
+        grid-template-columns : 1/2fr 1/2fr;
+        /* On impose les hauteurs des lignes 
+        La première n'est pas très haute pour que la deuxième passe un peu au-dessus*/
+        grid-template-rows: 1fr;
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    div#second-grid {
+        display :grid;
+        grid-template-areas:
+            "left"
+            "right";
+    }
+}
+
+
+/* Div formation */
+#left-panel{grid-area: left;}
+#left-panel {
+    padding-left: 4%;
+    padding-right: 4%;
+    font-size: 90%;
+    padding-bottom: 25px;
+}
+
+#right-panel { grid-area: right; }
+#right-panel {
+    padding-left: 4%;
+    padding-right: 4%;
+    font-size: 90%;
+    padding-bottom: 25px;
+}
+
+div.where-what-when{
+    margin-top: 2ex;
+    margin-bottom: 0.5ex;
+}
+span.where {
+    color: rgb(218, 68, 22);
+    font-size: 120%;
+}
+/* Ca applique le truc d'après à ce span, pour pas tout recopier */
+span.what::before, 
+span.when::before {
+    content: '|';
+    padding-right: 3px;
+}
+span.what,
+span.when {font-weight: bold;}
+
+/* Classes générales */
+.white {background-color: #fefefe;}
+.grey {background-color : rgb(230, 230, 230);}
+
+.flag{width: 20px;}
+
+.school:hover:link {
+    font-size: 120%;
+    text-decoration: underline;
+}
+.school {
+    color:rgb(218, 68, 22);
+    text-decoration: none;
+}
+
+.link{color:rgb(196, 78, 23);}

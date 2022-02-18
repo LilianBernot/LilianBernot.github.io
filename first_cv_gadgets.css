@@ -1,0 +1,132 @@
+/* Placement des infos */
+@media only screen and (min-width: 800px) {
+    #gadgets { 
+        display: grid; 
+        grid-area: infos;
+        grid-template-rows: 50px 25px 25px 25px;
+        grid-template-areas:
+            "title title"
+            "address phone"
+            "mail mail"
+            "linkedin linkedin";
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #gadgets { 
+        display: grid; 
+        grid-area: infos;
+        /* L'adresse passe sur 2 lignes, il faut lui laisser la place */
+        grid-template-rows: 60px 40px 25px 25px;
+        grid-template-areas:
+            "title title"
+            "address phone"
+            "mail mail"
+            "linkedin linkedin";
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #gadgets { 
+        display: grid; 
+        grid-area: infos;
+        /* L'adresse repasse sur 1 ligne*/
+        grid-template-rows: 90px 45px 25px 25px;
+        grid-template-areas:
+            "title title"
+            "address phone"
+            "mail mail"
+            "linkedin linkedin";
+    }
+}
+
+/* Lorsque la largeur est de moins de 600px, le titre se met sur 3 lignes
+Les infos doivent être collées à gauche, on vire donc la marge à gauche 
+On passe à la taille portable*/
+@media only screen and (max-width: 512px) {
+    #gadgets { 
+        display: grid; 
+        grid-area: infos;
+        /* L'adresse repasse sur 1 ligne*/
+        grid-template-rows: 75px 45px 25px 25px;
+        grid-template-areas:
+            "title title"
+            "address phone"
+            "mail mail"
+            "linkedin linkedin";
+    }
+}
+
+
+#gadgets div#title { grid-area: title; }
+
+@media only screen and (min-width: 600px) {
+    #gadgets div#address { grid-area: address; 
+        display : flex;
+        /* On lui demande d'être à droite de la case, mais pas collé au côté */
+        justify-content : end;
+        padding-right: 4%;
+    padding-left:220px;}
+}
+
+@media only screen and (max-width: 600px) {
+    #gadgets div#address { grid-area: address; 
+        display : flex;
+        /* On lui demande d'être à droite de la case, mais pas collé au côté */
+        justify-content : end;
+        padding-right: 4%;}
+}
+
+
+#gadgets div#phone { grid-area: phone; 
+    display : flex;
+    justify-content : start;
+    padding-left: 4%;}
+
+@media only screen and (min-width: 600px) {
+    #gadgets div#mail { grid-area: mail; 
+        padding-left:220px;}
+}
+@media only screen and (max-width: 600px) {
+    #gadgets div#mail { grid-area: mail; }
+}
+
+@media only screen and (min-width: 600px) {
+    #gadgets div#linkedin { grid-area: linkedin; 
+        padding-left: 220px;}
+}
+@media only screen and (max-width: 600px) {
+    #gadgets div#linkedin { grid-area: linkedin;} 
+}
+
+
+/* gadgets styling */
+
+#gadgets {font-size: 100%;}
+
+@media only screen and (min-width: 512px) {
+    #gadgets>#title {
+        font-weight: bold;
+        padding-bottom: 8px;
+        font-size: 130%;
+        /* le padding-left permet ici que le texte ne passe pas sous la photo en rétrecissant */
+        padding-left: 220px;
+    }
+}
+@media only screen and (max-width: 512px) {
+    #gadgets>#title {
+        font-weight: bold;
+        padding-bottom: 8px;
+        font-size: 130%;
+    }
+}
+
+
+span.fa {font-size: larger;}
+#gadgets {
+    text-align: center;
+    padding: 12px;
+}
+
+/* Remplissage des div infos */
+#gadgets div#div_infos_empty{ grid-area : infos;}
