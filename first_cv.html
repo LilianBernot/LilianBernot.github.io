@@ -80,33 +80,37 @@
 <div id="second-grid">
   <!-- Troisième ligne -->
   <div id="left-panel" class="grey">
-    <div>
-        <h2>Formation</h2>
+    <div id="extendable" onclick="modifyText('#extender_formation', 'to_extend_formation')">
+      <h2>Formation <span id="to_extend_formation" class="extender">⇱</span></h2>
     </div>
-    <div class="where-what-when">
-      <span class="where">
-        <a class="school" href="https://www.minesparis.psl.eu/">Mines ParisTech</a>
-      </span>
-      <span class="what">cycle ingénieur civil</span>
-      <span class="when">Entré en 2021</span>
-    </div>
-    <div class="where-what-when">
-      <span class="where">
-        <a class="school" href="http://lyc21-carnot.ac-dijon.fr/">Lycée Carnot, Dijon</a>
-      </span>
-      <span class="what">classe CPGE MPSI - MP*</span>
-      <span class="when">2018-2021</span>
-    </div>
-    <div class="where-what-when">
-      <span class="where">
-        <a class="school" href="http://www.francoiscouperin.fr/">Lycée François Couperin, Fontainebleau</a>
-      </span>
-      <span class="what">classe S - spé mathématiques</span>
-      <span class="when">2015-2018</span>
+    <div id='extender_competences'>
+      <div class="where-what-when">
+        <span class="where">
+          <a class="school" href="https://www.minesparis.psl.eu/">Mines ParisTech</a>
+        </span>
+        <span class="what">cycle ingénieur civil</span>
+        <span class="when">Entré en 2021</span>
+      </div>
+      <div class="where-what-when">
+        <span class="where">
+          <a class="school" href="http://lyc21-carnot.ac-dijon.fr/">Lycée Carnot, Dijon</a>
+        </span>
+        <span class="what">classe CPGE MPSI - MP*</span>
+        <span class="when">2018-2021</span>
+      </div>
+      <div class="where-what-when">
+        <span class="where">
+          <a class="school" href="http://www.francoiscouperin.fr/">Lycée François Couperin, Fontainebleau</a>
+        </span>
+        <span class="what">classe S - spé mathématiques</span>
+        <span class="when">2015-2018</span>
+      </div>
     </div>
 
-    <div>
-      <h2>Compétences</h2>
+    <div id="extendable" onclick="modifyText('#extender_competences', 'to_extend_competences')">
+      <h2>Compétences <span id="to_extend_competences" class="extender">⇱</span></h2>
+    </div>
+    <div id='extender_competences'>
       <ul>
           <li>Rigueur intellectuelle, méthode</li>
           <li>Curiosité, intérêt</li>
@@ -116,8 +120,10 @@
         </ul>
     </div>
     
-    <div>
-      <h2>Centres d’intérêt</h2>
+    <div id="extendable" onclick="modifyText('#extender_interest_centers', 'to_extend_interest_centers')">
+      <h2>Centres d’intérêt <span id="to_extend_interest_centers" class="extender">⇱</span></h2>
+    </div>
+    <div id='extender_interest_centers'>
       <ul>
           <li>Sport : Pratique de sport en tous genres. Pratique de l’escalade, en salle et extérieur en forêt de Fontainebleau.</li>
           <li>Musique : Intégration de la fanfare de l’école pour l’apprentissage du trombone.</li>
@@ -131,10 +137,10 @@
   </div>
 
   <div id="right-panel" class="grey">
-    <div>
-        <h2>Expérience</h2>
+    <div id="extendable" onclick="modifyText('#extender_experience', 'to_extend_experience')">
+        <h2>Expérience <span id="extender_experience" class="extender">⇱</span></h2>
     </div>
-    <div class="where-what-when">
+    <div id="to_extend_experience" class="where-what-when">
       <span class="where">Mines ParisTech</span>
       <span class="what">MIG Solaire</span>
       <span class="when">2021</span>
@@ -147,28 +153,35 @@
     et ingénieurs de métier, de l'école des Mines de Paris et de l'
     <a class="link" href = "https://www.espci.psl.eu/fr/">ESPCI</a>.
 
-    <div>
-        <h2>Langues</h2>
+    <div id="extendable" onclick="modifyText('#extender_languages', 'to_extend_languages')">
+        <h2>Langues <span id="extender_languages" class="extender">⇱</span></h2>
     </div>
-    <ul>
-      <li>     
-        <img class="flag"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/1200px-Flag_of_the_United_Kingdom_%283-5%29.svg.png">
-        Anglais : B2-C1</li>
-      <li>
-        <img class="flag"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/langfr-225px-Flag_of_Spain.svg.png">
-        Espagnol : B1-B2</li>
-      <li>
-        <img class="flag"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/langfr-225px-Flag_of_the_People%27s_Republic_of_China.svg.png">
-        Chinois : débutant</li>
-    </ul>
-    <div>
-      <h2>Voyages à l’étranger</h2>
+    <div id="to_extend_languages">
+      <ul>
+        <li>     
+          <img class="flag"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/1200px-Flag_of_the_United_Kingdom_%283-5%29.svg.png">
+          Anglais : B2-C1</li>
+        <li>
+          <img class="flag"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/langfr-225px-Flag_of_Spain.svg.png">
+          Espagnol : B1-B2</li>
+        <li>
+          <img class="flag"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/langfr-225px-Flag_of_the_People%27s_Republic_of_China.svg.png">
+          Chinois : débutant</li>
+      </ul>
+    </div>
+        
+    <div id="extendable" onclick="modifyText('#extender_trips', 'to_extend_trips')">
+      <h2>Voyages à l’étranger <span id="extender_trips" class="extender">⇱</span></h2>
+    </div>
+        
+    <div id="to_extend_trips">
       <ul>
         <li>Angleterre : deux voyages d’étude d’une semaine, logé chez l’habitant</li>
         <li>Hong Kong : échange de 10 jours, logé chez l’habitant</li>
         <li>Espagne : découverte en itinérance</li>
       </ul>
     </div>
+        
       <span style="padding-right:3px; padding-top: 3px; display:block;">
       </span>
     </div>
