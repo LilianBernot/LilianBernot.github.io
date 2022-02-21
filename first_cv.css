@@ -120,6 +120,7 @@ span.when::before {
 }
 span.what,
 span.when {font-weight: bold;}
+.logo{width:30px}
 
 /* Classes générales */
 .white {background-color: #fefefe;}
